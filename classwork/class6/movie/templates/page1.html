@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>Movies</h1>
+    {{form.errors}}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label>Movie Name</label><br>
+        <input type="text" name="mname"><br>
+        <label>Release Year</label><br>
+        <input type="text" name="year"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

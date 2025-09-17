@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <p>{{ message }}</p>
+    {% for cust in customer %}
+    <table border="1">
+        <tr>
+            <td>id:</td>
+            <td>{{ cust.id }}</td>
+        </tr>
+        <tr>
+           <td>name:</td>
+           <td>{{ cust.name }}</td> 
+        </tr>
+        <tr>
+           <td>email:</td>
+           <td>{{ cust.email }}</td>
+        </tr>
+    </table>
+    <br>
+    {% endfor %}
+</body>
+</html>

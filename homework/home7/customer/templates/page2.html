@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customers</title>
+</head>
+<body>
+    <h1>Customers</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        {% for cust in customers %}
+        <tr>
+            <td>{{ cust.name }}</td>
+            <td>{{ cust.email }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

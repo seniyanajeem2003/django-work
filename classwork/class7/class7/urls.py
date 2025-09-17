@@ -1,5 +1,5 @@
 """
-URL configuration for class6 project.
+URL configuration for class7 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,8 +16,8 @@ Including another URLconf
 """
 
 from django.urls import path
-from movie import views
+from book import views
 
 urlpatterns = [
-    path('', views.movie),
+    path('', views.book),
 ]

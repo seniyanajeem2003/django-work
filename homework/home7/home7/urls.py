@@ -1,5 +1,5 @@
 """
-URL configuration for class6 project.
+URL configuration for home7 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,8 +16,11 @@ Including another URLconf
 """
 
 from django.urls import path
-from movie import views
+from customer import views
 
 urlpatterns = [
-    path('', views.movie),
+    
+    path('page1/', views.page1,name='page1'),
+    path('page2/', views.page2,name='page2'),
+    path('page3/', views.page3,name='page3'),
 ]

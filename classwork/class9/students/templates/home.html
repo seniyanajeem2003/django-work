@@ -1,0 +1,26 @@
+{% extends 'layout/app-layout.html' %}
+
+{% block 'content' %}
+   <table border="1">
+    <tr>
+        <th>Sl no.</th>
+        <th>Student Name</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <td>1.</td>
+        <td>Seniya Najeem</td>
+        <td><a href="{% url 'result' student_name='Seniya Najeem' %}">View Result</a></td>
+    </tr>
+    <tr>
+        <td>2.</td>
+        <td>Amaya Raj</td>
+        <td><a href="{% url 'result' student_name='Amaya Raj' %}">View Result</a></td>
+    </tr>
+    <tr>
+        <td>3.</td>
+        <td>Karthika Indrajith</td>
+        <td><a href="{% url 'result' student_name='Karthika Indrajith' %}">View Result</a></td>
+    </tr>
+   </table>
+{% endblock %}

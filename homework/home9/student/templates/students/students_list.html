@@ -1,0 +1,11 @@
+{% extends 'layout/app-layout.html'%}
+{% block 'content' %}
+    <h1>{{ message }}</h1><br>
+    <a href="{% url 'students:student_form' %}">Add Student</a><br>
+    <ul>
+        {% for s in students %}
+            <li>{{ s.name }} (Roll No: {{ s.roll_no }})</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

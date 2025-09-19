@@ -1,0 +1,10 @@
+{% extends 'layout/app-layout.html'%}
+{% block 'content' %}
+    <h1>{{ message }}</h1>
+    <a href="{% url 'teachers:teacher_form' %}">Add Teacher</a><br>
+    <ul>
+        {% for t in teachers %}
+            <li>{{ t.name }} (Subject: {{ t.subject }})</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

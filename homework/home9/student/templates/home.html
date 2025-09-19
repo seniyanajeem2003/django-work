@@ -1,0 +1,8 @@
+{% extends 'layout/app-layout.html'%}
+{% block 'content' %}
+    <h1>Welcome to College Webpage</h1><br><br>
+    <ul>
+        <li><a href="{% url 'students:student_list' %}">Students</a></li><br>
+        <li><a href="{% url 'teachers:teacher_list' %}">Teachers</a></li>
+    </ul>
+{% endblock %}

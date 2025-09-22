@@ -1,0 +1,25 @@
+{%extends 'layout/app-layout.html'%}
+{%block content%}
+<h1>Student List</h1>
+
+<table border="1">
+    <tr><th>Student_id</th>
+        <th>Student_name</th>
+        <th>Student_course</th>
+        <th>Student_age</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+        {%for student in student_list%}
+    <tr>
+    <td>{{student.id}}</td>
+    <td>{{ student.name }} </td> 
+    <td>{{ student.course }}</td>
+    <td>{{ student.age }}</td>
+    <td><a href="{%url 'updatestudent' student.id %}" class="btn btn-success" value="edit" type="submit">Edit</a></td>
+    <td><a href="{%url 'deletestudent' student.id %}" class="btn btn-success" value="edit" type="submit">Delete</a></td>
+    </tr>
+     {% endfor %}
+    </table> 
+    
+{%endblock%}

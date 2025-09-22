@@ -6,7 +6,7 @@ def teacher_list(request):
     teachers = teacher.objects.all()
     return render(request, 'teachers/teachers_list.html', {
         "teachers": teachers,
-        "message": "Welcome to the Teachers Page!"
+        "message": "Welcome to the Teachers Page."
     })
 
 def teacher_form(request):

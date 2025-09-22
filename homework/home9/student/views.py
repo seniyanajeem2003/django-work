@@ -6,7 +6,7 @@ def student_list(request):
     students = student.objects.all()
     return render(request, 'students/students_list.html', {
         "students": students,
-        "message": "Welcome to the Students Page!"
+        "message": "Welcome to the Students Page."
     })
 
 def student_form(request):

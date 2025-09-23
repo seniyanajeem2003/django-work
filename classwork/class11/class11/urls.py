@@ -1,5 +1,5 @@
 """
-URL configuration for class10 project.
+URL configuration for class11 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -14,12 +14,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from library import views
+from django.contrib import admin
 from django.urls import path
+from counter import views
 
 urlpatterns = [
-        path('create/',views.library_create,name='createlibrary'),
-        path('',views.library_read,name='home'),
-        path('update/<int:id>/',views.library_update,name='updatelibrary'),
-        path('delete/<int:id>/', views.library_delete, name='deletelibrary'),
-    ]
+    path('',views.signup_page,name='signup'),
+    path('login/',views.login_page,name='login'),
+    path('logout/', views.logout_view,name='logout'),
+    path('pagevisit/',views.home,name='home')
+]

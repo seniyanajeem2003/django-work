@@ -1,5 +1,5 @@
 """
-URL configuration for home10 project.
+URL configuration for home12 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -14,12 +14,10 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from school import views
 from django.urls import path
+from api import views
 
 urlpatterns = [
-        path('create/',views.school_create,name='createstudent'),
-        path('',views.school_read,name='home'),
-        path('update/<int:id>/',views.school_update,name='updatestudent'),
-        path('delete/<int:id>',views.school_delete,name='deletestudent'),
-    ]
+    path('', views.signup, name='signup'),
+    path('login', views.login, name='login'),
+]

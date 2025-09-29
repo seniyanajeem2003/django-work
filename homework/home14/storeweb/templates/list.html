@@ -1,0 +1,24 @@
+{%extends 'layout/app-layout.html'%}
+{%block content%}
+<h1>View Products</h1>
+<table border="1">
+    <tr><th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>PDF</th>
+        <th>E-mail</th>
+    </tr>
+        {%for products in product_list%}
+    <tr>
+    <td>{{products.id}}</td>
+    <td>{{ products.name }} </td> 
+    <td>{{products.description}}</td>
+    <td>{{ products.price }}</td>
+    <td><a href="{%url 'pdf' products.id %}" class="btn btn-success" value="edit" type="submit">Pdf</a></td>
+     <td><a href="{%url 'email' products.id %}" class="btn btn-success" value="edit" type="submit">email</a></td>
+    </tr>
+     {% endfor %}
+    </table> 
+
+{%endblock%}

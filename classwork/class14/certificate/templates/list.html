@@ -1,0 +1,25 @@
+{%extends 'layout/app-layout.html'%}
+{%block content%}
+<h1>Student List</h1>
+<table border="1">
+    <tr><th>Student_id</th>
+        <th>Student_name</th>
+        <th>Student_course</th>
+        <th>Completion_date</th>
+        <th>PDF</th>
+        <th>E-mail</th>
+    </tr>
+        {%for student in student_list%}
+    <tr>
+    <td>{{student.id}}</td>
+    <td>{{ student.name }} </td> 
+    <td>{{ student.course }}</td>
+    <td>{{ student.date }}</td>
+    <td><a href="{%url 'pdf' student.id %}" class="btn btn-success" value="edit" type="submit">Pdf</a></td>
+    <td><a href="{%url 'email' student.id %}" class="btn btn-success" value="edit" type="submit">E-mail</a></td>
+    </tr>
+    </tr>
+     {% endfor %}
+    </table> 
+
+{%endblock%}
